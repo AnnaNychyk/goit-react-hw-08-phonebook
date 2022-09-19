@@ -1,0 +1,28 @@
+/* .wrapper {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5)
+} */
+
+.menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.link {
+    display: inline-block;
+    padding: 5px;
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.link.active {
+    color: rgb(255, 103, 103);
+}
