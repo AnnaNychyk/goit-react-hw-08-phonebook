@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 
 import Navbar from './components/Navbar/Navbar';
+import Register from 'pages/Register';
 
 const Phonebook = lazy(() => import('./components/Phonebook/Phonebook'));
 
@@ -21,7 +22,7 @@ function App() {
             }
           />
           <Route path="/contacts" element={<Phonebook />} />
-          <Route path="/register" element={<p>Register page</p>} />
+          <Route path="/register" element={<Register />} />
           <Route path="/login" element={<p>Login page</p>} />
           <Route path="*" element={<p>Not Found page</p>} />
         </Routes>
