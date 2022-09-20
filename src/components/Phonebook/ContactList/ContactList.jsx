@@ -16,8 +16,8 @@ function ContactList() {
   return (
     <ul>
       {contacts &&
-        getFilteredContacts().map(({ id, name, phone }) => (
-          <ContactListItem key={id} name={name} number={phone} id={id} />
+        getFilteredContacts().map(({ id, name, number }) => (
+          <ContactListItem key={id} name={name} number={number} id={id} />
         ))}
     </ul>
   );

@@ -33,7 +33,7 @@ const ContactForm = () => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    onAddContact({ name, phone: number });
+    onAddContact({ name, number });
 
     reset();
   };
