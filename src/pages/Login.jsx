@@ -1,17 +1,17 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
-import RegisterForm from 'components/RegisterForm/RegisterForm';
-import { signup } from 'redux/auth/auth-operations';
+import LoginForm from 'components/LoginForm/LoginForm';
+import { login } from 'redux/auth/auth-operations';
 import { getAuthError, isAuth } from '../redux/auth/auth-selectors';
 
-const Register = () => {
+const Login = () => {
   const dispatch = useDispatch();
   const { status } = useSelector(getAuthError);
   const isLogin = useSelector(isAuth);
 
-  const onRegister = data => {
-    dispatch(signup(data));
+  const onLogin = data => {
+    dispatch(login(data));
   };
 
   if (isLogin) {
@@ -20,10 +20,10 @@ const Register = () => {
 
   return (
     <>
-      <RegisterForm onSubmit={onRegister} />
-      {status && <p>User with that name already registered</p>}
+      <LoginForm onSubmit={onLogin} />
+      {status && <p>User with such email is not registered</p>}
     </>
   );
 };
 
-export default Register;
+export default Login;
