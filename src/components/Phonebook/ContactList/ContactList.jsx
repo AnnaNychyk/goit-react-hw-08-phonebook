@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import ContactListItem from '../ContactListItem/ContactListItem';
 import { useSelector } from 'react-redux';
 import { getFilter } from 'redux/filter/filter-selectors';
+import styles from './ContactList.module.css';
 
 function ContactList() {
   const contacts = useSelector(store => store.contacts.items);
@@ -14,7 +15,7 @@ function ContactList() {
   };
 
   return (
-    <ul>
+    <ul className={styles.list}>
       {contacts &&
         getFilteredContacts().map(({ id, name, number }) => (
           <ContactListItem key={id} name={name} number={number} id={id} />

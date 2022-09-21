@@ -1,3 +1,6 @@
+// import { RiContactsLine } from 'react-icons/ri';
+import { RiContactsLine } from '@react-icons/all-files/ri/RiContactsLine';
+
 import NavbarMenu from './NavbarMenu/NavbarMenu';
 import NavbarAuth from './NavbarAuth/NavbarAuth';
 import NavbarUser from './NavbarUser/NavbarUser';
@@ -9,6 +12,7 @@ const Navbar = () => {
 
   return (
     <div className={styles.wrapper}>
+      <RiContactsLine className={styles.icon} />
       {isLogin && <NavbarMenu />}
       {isLogin ? <NavbarUser /> : <NavbarAuth />}
     </div>

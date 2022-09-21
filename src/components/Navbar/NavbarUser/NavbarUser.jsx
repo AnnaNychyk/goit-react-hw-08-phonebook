@@ -15,7 +15,7 @@ const NavbarUser = () => {
   return (
     <div className={styles.wrapper}>
       <span>{name}</span>|
-      <button onClick={onLogout} type="button">
+      <button className={styles.btn} onClick={onLogout} type="button">
         logout
       </button>
     </div>

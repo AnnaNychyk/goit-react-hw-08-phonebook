@@ -28,10 +28,16 @@ function App() {
             <Route
               path="/"
               element={
-                <h1>
+                <h2
+                  style={{
+                    margin: '30px auto',
+                    textAlign: 'center',
+                    width: '800px',
+                  }}
+                >
                   Welcome to the phone book. Please sign in to access your
                   contacts.
-                </h1>
+                </h2>
               }
             />
             <Route path="/register" element={<Register />} />

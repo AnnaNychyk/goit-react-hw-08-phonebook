@@ -71,7 +71,9 @@ const ContactForm = () => {
           required
         />
       </label>
-      <button type="submit">Add contact</button>
+      <button className={styles.btn} type="submit">
+        Add contact
+      </button>
     </form>
   );
 };

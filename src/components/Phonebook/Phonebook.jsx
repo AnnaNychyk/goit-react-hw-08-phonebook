@@ -8,6 +8,7 @@ import { fetchContacts } from 'redux/contacts/contacts-operations';
 import { setFilter } from 'redux/filter/filter-actions';
 import { getFilter } from 'redux/filter/filter-selectors';
 import { getLoading } from 'redux/contacts/contacts-selectors';
+import styles from './Phonebook.module.css';
 
 const Phonebook = () => {
   const filter = useSelector(getFilter);
@@ -24,11 +25,11 @@ const Phonebook = () => {
   };
 
   return (
-    <div>
-      <h1>Phonebook</h1>
+    <div className={styles.wrapper}>
+      <h1 className={styles.title}>Phonebook</h1>
       <ContactForm />
 
-      <h2>Contacts</h2>
+      <h2 className={styles.title}>Contacts</h2>
       <Filter onChange={onSetFilter} value={filter} />
 
       {loading && <p>...load contacts</p>}
