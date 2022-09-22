@@ -13,7 +13,7 @@ const RegisterForm = ({ onSubmit }) => {
   const { name, email, password } = state;
 
   return (
-    <form action="" onSubmit={handleSubmit}>
+    <form className={styles.wrapper} action="" onSubmit={handleSubmit}>
       <div className={styles.group}>
         <label className={styles.label} htmlFor="">
           User name:
@@ -55,7 +55,9 @@ const RegisterForm = ({ onSubmit }) => {
         />
       </div>
       <div className={styles.group}>
-        <button type="submit">Registration</button>
+        <button className={styles.btn} type="submit">
+          Registration
+        </button>
       </div>
     </form>
   );

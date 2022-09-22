@@ -13,7 +13,7 @@ const LoginForm = ({ onSubmit }) => {
   const { email, password } = state;
 
   return (
-    <form action="" onSubmit={handleSubmit}>
+    <form className={styles.wrapper} action="" onSubmit={handleSubmit}>
       <div className={styles.group}>
         <label className={styles.label} htmlFor="">
           User email:
@@ -41,7 +41,9 @@ const LoginForm = ({ onSubmit }) => {
         />
       </div>
       <div className={styles.group}>
-        <button type="submit">Login</button>
+        <button className={styles.btn} type="submit">
+          Login
+        </button>
       </div>
     </form>
   );

@@ -13,6 +13,7 @@ import styles from './Phonebook.module.css';
 const Phonebook = () => {
   const filter = useSelector(getFilter);
   const loading = useSelector(getLoading);
+  // const loading = true;
 
   const dispatch = useDispatch();
 
@@ -30,9 +31,11 @@ const Phonebook = () => {
       <ContactForm />
 
       <h2 className={styles.title}>Contacts</h2>
-      <Filter onChange={onSetFilter} value={filter} />
+      <div className={styles.group}>
+        <Filter onChange={onSetFilter} value={filter} />
 
-      {loading && <p>...load contacts</p>}
+        {loading && <p className={styles.load}>...load contacts</p>}
+      </div>
 
       <ContactList />
     </div>

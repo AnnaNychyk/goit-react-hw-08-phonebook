@@ -15,7 +15,19 @@ const Register = () => {
   return (
     <>
       <RegisterForm onSubmit={onRegister} />
-      {status && <p>User with that name already registered</p>}
+      {status && (
+        <p
+          style={{
+            margin: '0 auto',
+            marginTop: '10px',
+            textAlign: 'center',
+            width: '800px',
+            color: 'rgb(255, 0, 0)',
+          }}
+        >
+          User with that name already registered
+        </p>
+      )}
     </>
   );
 };
